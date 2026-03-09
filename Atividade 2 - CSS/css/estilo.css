@@ -1,0 +1,108 @@
+:root {
+  --bg-primary: #0d1117;       /* Fundo principal (Deep Space) */
+  --bg-secondary: #33578a;     /* Cards e seções */
+  --text-main: #e6edf3;        /* Texto legível */
+  --title: #4ca1eb;
+  --bg-dim: #6394cc;         /* Legendas e textos secundários */
+  --accent: #58a6ff;           /* Azul link/botão */
+  --highlight: #2f81f7;        /* Hover e estados ativos */
+  --border: #ffffff;           /* Divisores sutis */
+}
+
+* {
+  font-family: Arial;
+  text-align: justify;
+  padding: 0;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+
+body{
+    color: var(--text-main);
+    font-size: 18px;
+    width: 60%;
+    background: #0D1117;
+    background: linear-gradient(180deg, rgba(13, 17, 23, 1) 2%, rgba(21, 44, 74, 1) 49%, rgba(47, 129, 247, 1) 100%);
+}
+
+.habilidades li{
+    padding: 5px;
+    margin-left: 50px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+hr{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 2px;
+    background-color: var(--border);
+    border: none;
+}
+
+#nome{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 42px;
+    color: var(--highlight);
+}
+
+.projetos h2 {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0; 
+    font-size: 32px;
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: 40px auto; 
+}
+
+.projeto {
+  background-color: var(--bg-secondary);
+  padding: 30px;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+
+  width: 40%; 
+  
+  transition: all 0.3s ease;
+  margin: 20px;
+}
+.projeto:hover{
+    background-color:var(--highlight) ;
+    transform: scale(1.1);
+}
+
+.projeto h2{
+    font-size: 34px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.projeto h3{
+    margin-bottom: 15px;
+}
+
+
+
+li:nth-child(odd){
+    color: var(--highlight);
+}
+
+footer {
+    width: 100%;           /* Garante que o footer ocupe toda a largura disponível */
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
