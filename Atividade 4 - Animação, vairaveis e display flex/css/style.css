@@ -1,0 +1,126 @@
+:root {
+/* Tema claro */
+  --header-bg-main: #2C3E50;
+  --bg-main: #F0F0F5;
+  --text-primary: black;
+  --text-secondary: white;
+  --shadow: 0 8px 24px rgba(160, 160, 160, 0.5);
+  --font-title: 'Inter', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+/* Tema Escuro */
+  --dark-header-bg-main: #2C3E50;
+  --dark-bg-main: #272727;
+  --dark-text-primary: white;
+  --dark-text-secondary: black;
+  --dark-shadow: 0 8px 24px rgba(255, 255, 255, 0.5);
+  --dark-font-title: 'Inter', sans-serif;
+  --dark-font-body: 'Roboto', sans-serif;
+}
+
+body { margin: 0; }
+
+h1{
+    font-family: var(--font-title);  
+}
+
+p{
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav li {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: flex;
+    list-style-type: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--header-bg-main);
+    color: var(--text-secondary);
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+nav button{
+    border: none;
+    background-color: transparent;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: var(--bg-main);
+}
+
+main h1,p{
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 50px 0 50px;
+    flex-direction: row;
+}
+
+.link-card{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    justify-content: center;
+
+}
+
+.link-card p{
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 22px;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: 87vh;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+    background-color: var(--header-bg-main);
+    color: var(--text-secondary);
+    margin-top: auto;
+}
