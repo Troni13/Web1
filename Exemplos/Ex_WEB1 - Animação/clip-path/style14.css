@@ -1,0 +1,30 @@
+.card {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: clip-path 0.6s ease;
+  
+  /* Forma inicial (ex: trapézio inclinado pra esquerda) */
+  clip-path: polygon(
+    0% 0%,    /* topo esquerdo */
+    80% 0%,   /* topo direito puxado pra esquerda */
+    100% 100%,/* canto inferior direito */
+    20% 100%  /* canto inferior esquerdo puxado pra direita */
+  );
+}
+
+.card:hover {
+  /* Forma transformada (ex: losango) */
+  clip-path: polygon(
+    50% 0%,   /* topo central */
+    100% 50%, /* direita central */
+    50% 100%, /* base central */
+    0% 50%    /* esquerda central */
+  );
+}

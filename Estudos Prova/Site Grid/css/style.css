@@ -1,0 +1,153 @@
+/* =========================================
+   1. VARIÁVEIS E RESET
+   ========================================= */
+:root {
+    --cor-fundo: #f9f9f9;
+    --cor-header: #ffffff;
+    --cor-borda: #cccccc;
+    --cor-texto: #333333;
+    --cor-hover: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* =========================================
+   2. ESTRUTURA MACRO (CSS GRID)
+   ========================================= */
+/* Define as 3 grandes áreas: Header no topo, Sidebar à esquerda, Main à direita */
+.grid-layout {
+    display: grid;
+    /* 2 colunas: uma de 250px fixa, o resto ocupa o espaço que sobrar (1fr) */
+    grid-template-columns: 200px 1fr;
+    /* 2 linhas: uma de 70px fixa, o resto ocupa o espaço que sobrar (1fr) */
+    grid-template-rows: 70px 1fr;
+    /* Mapeamento das áreas (muito útil para visualizar o layout no código) */
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+    height: 100vh; /* Ocupa 100% da altura da tela */
+}
+
+/* =========================================
+   3. CABEÇALHO (FLEXBOX)
+   ========================================= */
+.header {
+    grid-area: header; /* Liga este elemento à área 'header' definida no grid-layout */
+    background-color: var(--cor-header);
+    border-bottom: 1px solid var(--cor-borda);
+    
+    /* Flexbox para colocar logo, busca e perfil na mesma linha */
+    display: flex;
+    justify-content: space-between; /* Espalha os itens nas pontas e no meio */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 20px;
+}
+
+.busca input {
+    padding: 8px 16px;
+    width: 300px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+}
+
+/* =========================================
+   4. MENU LATERAL
+   ========================================= */
+.sidebar {
+    grid-area: sidebar; /* Liga este elemento à área 'sidebar' */
+    background-color: var(--cor-header);
+    border-right: 1px solid var(--cor-borda);
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: background-color 0.2s; /* Animação suave no hover */
+}
+
+.sidebar li a:hover {
+    background-color: var(--cor-hover); /* Pseudo-classe de interação */
+}
+
+/* =========================================
+   5. CONTEÚDO PRINCIPAL (GRID RESPONSIVO)
+   ========================================= */
+.main-content {
+    grid-area: main; /* Liga este elemento à área 'main' */
+    padding: 20px;
+    overflow-y: auto; /* Adiciona barra de rolagem apenas nesta área se tiver muito conteúdo */
+    
+    /* Grid interno para os Cards */
+    display: grid;
+    /* O SEGREDO DA RESPONSIVIDADE: 
+       Cria colunas que no mínimo têm 250px. 
+       Se sobrar espaço, ele "encaixa" (auto-fit) mais colunas dividindo o espaço igual (1fr). */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Espaço entre os cards */
+}
+
+/* =========================================
+   6. CARDS DE CONTEÚDO (FLEXBOX E ESTÉTICA)
+   ========================================= */
+.card {
+    background-color: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden; /* Faz a imagem não vazar das bordas arredondadas */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Flexbox interno para organizar imagem em cima, texto embaixo */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Animação com pseudo-classe :hover */
+.card:hover {
+    transform: translateY(-5px); /* Sobe o card levemente */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1); /* Adiciona sombra */
+}
+
+.thumbnail {
+    background-color: #e0e0e0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: bold;
+}
+
+.info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaçamento entre o h3 e o p do card */
+}
+
+.info h3 {
+    font-size: 16px;
+    color: var(--cor-texto);
+}
+
+.info p {
+    font-size: 14px;
+    color: #777;
+}

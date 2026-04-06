@@ -1,0 +1,28 @@
+.hamburguer {
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-top: 4rem;
+  gap: 1rem;
+  transition: left 0.3s ease;
+}
+
+#menu-toggle:checked ~ .menu {
+  left: 0;
+}

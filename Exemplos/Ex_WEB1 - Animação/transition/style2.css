@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;  
+  background: #ececec;
+}
+
+.caixa {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  
+  /*anima duas propriedades ao mesmo tempo: largura e fundo */
+  transition: width 0.5s ease, background 1s linear;
+  
+}
+
+.caixa:hover {
+  width: 200px;
+  background: teal;
+}

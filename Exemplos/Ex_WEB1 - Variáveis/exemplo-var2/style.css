@@ -1,0 +1,28 @@
+:root {
+  --espaco: 20px;
+  --cor-caixa: #2ecc71;
+  --borda-radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: var(--espaco);
+}
+
+.container {
+  display: flex;
+  gap: var(--espaco);
+}
+
+.box {
+  background-color: var(--cor-caixa);
+  color: white;
+  padding: var(--espaco);
+  border-radius: var(--borda-radius);
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}

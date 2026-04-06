@@ -1,0 +1,82 @@
+	:root {
+      --cor-fundo: white;
+      --cor-texto: black;
+    }
+    #tema {
+       position: absolute;
+       opacity: 0;
+       width: 0;
+       height: 0;
+    }
+
+    /* Quando o checkbox estiver marcado, aplica tema escuro */
+    #tema:checked ~ .conteudo {
+      --cor-fundo: black;
+      --cor-texto: white;
+    }
+
+
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .conteudo {
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      min-height: 100vh; /* 100vh: significa 100% da altura da viewport (ou seja, da área visível da janela do navegador).
+
+*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s, color 0.5s;
+	  /* define efeitos de transição suaves.*/ 
+    }
+
+    /* Estilizando o botão como se fosse um switch */
+    .switch {
+      margin-bottom: 20px;
+    }
+
+    .switch label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      width: 50px;
+      height: 24px;
+      background-color: #ccc;
+      border-radius: 24px;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .slider::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 2px;
+      top: 2px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    #tema:checked + label .slider {
+      background-color: #666;
+    }
+
+    #tema:checked + label .slider::before {
+      transform: translateX(26px);
+    }

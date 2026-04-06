@@ -1,0 +1,32 @@
+.moving-line-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.moving-line-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%; /* Inicia fora do botão, à esquerda */
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  animation: moveLine 2s infinite; /* A animação é chamada e repetida infinitamente */
+}
+
+@keyframes moveLine {
+  0% {
+    left: -100%; /* A linha começa fora da tela, à esquerda */
+  }
+  50% {
+    left: 50%; /* A linha se move até o meio do botão */
+  }
+  100% {
+    left: 100%; /* A linha se move até o final, à direita */
+  }
+}

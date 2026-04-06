@@ -1,0 +1,31 @@
+.animated-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  overflow: hidden; /* Impede que o pseudo-elemento ultrapasse os limites do botão */
+}
+
+.animated-button::before {
+  content: ""; /* Necessário para criar o pseudo-elemento */
+  position: absolute;
+  bottom: 0; /* Posiciona a linha na parte inferior do botão */
+  left: 0;
+  width: 0; /* A linha começa com largura zero */
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s ease, left 0.3s ease; /* A animação vai afetar a largura e a posição da linha */
+ 
+}
+
+.animated-button:hover::before {
+  width: 100%; /* A linha vai expandir quando o mouse passar sobre o botão */
+  left: 0; /* A linha vai se alinhar ao início do botão */
+}
+
+.animated-button:hover {
+  background-color: #45a049; /* Mudança na cor do fundo do botão */
+}

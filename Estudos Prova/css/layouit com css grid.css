@@ -1,0 +1,28 @@
+/* CONTAINER GRID (Elemento Pai) */
+.grid-container {
+    display: grid; /* Ativa o grid */
+    
+    /* Define as colunas: 3 colunas de tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* Exemplo Responsivo Automático (Muito útil em provas!): 
+       Cria colunas que não ficam menores que 250px e ocupam o espaço que sobrar (1fr) */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    
+    /* Define o tamanho das linhas automaticamente */
+    grid-auto-rows: minmax(100px, auto);
+    
+    gap: 15px; /* Espaço entre linhas e colunas */
+}
+
+/* ITEM GRID (Elemento Filho) */
+.grid-item-destaque {
+    /* Faz um item ocupar 2 colunas */
+    grid-column: span 2; 
+    
+    /* Faz um item ocupar desde a linha 1 até a linha 3 */
+    /* grid-row: 1 / 3; */
+    
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+}

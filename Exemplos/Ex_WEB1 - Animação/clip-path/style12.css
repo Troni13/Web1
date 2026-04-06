@@ -1,0 +1,21 @@
+.box {
+  width: 300px;
+  height: 200px;
+  background-color: #4A90E2;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 20px;
+  clip-path: circle(0% at 50% 50%); /* começa invisível */
+  transition: clip-path 0.6s ease;
+}
+
+.reveal-box:hover .content {
+  clip-path: circle(150% at 50% 50%); /* cresce e revela tudo */
+}

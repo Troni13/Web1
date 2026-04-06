@@ -1,0 +1,35 @@
+/* Interação do Usuário */
+button {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    /* Quando o mouse passa por cima */
+    background-color: darkblue; 
+}
+
+input:focus {
+    /* Quando o campo de texto é clicado para digitação */
+    outline: 2px solid var(--cor-primaria);
+}
+
+/* Estruturais (Posição no DOM) */
+ul li:first-child {
+    /* Seleciona o primeiro item da lista */
+    font-weight: bold;
+}
+
+ul li:nth-child(even) {
+    /* Seleciona os itens pares (2, 4, 6...) para efeito "zebrado" */
+    background-color: #e0e0e0;
+}
+
+/* Formulários */
+input:required {
+    /* Seleciona campos que têm o atributo 'required' no HTML */
+    border-left: 4px solid red;
+}

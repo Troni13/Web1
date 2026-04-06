@@ -1,0 +1,23 @@
+.menu {
+  position: fixed; /* Fixa o elemento na tela, mesmo com scroll*/
+  top: 0;   /* Coloca o elemento no canto superior e */
+  left: 0;  /* esquerdo da tela */
+  height: 100vh; /* Altura igual à altura total da janela */
+  width: 200px; /* Define a largura visível do menu */
+  overflow: hidden; /* Esconde qualquer conteúdo que “saia” dos limites do wrapper */
+
+}
+
+.sidebar {
+  background: #333;
+  color: white;
+  height: 100%;  /* O painel ocupa todo o espaço do .menu-wrapper */
+  width: 100%;
+  padding: 20px;  /* espaçamento interno */
+  clip-path: inset(0 100% 0 0); /* totalmente escondido */
+  transition: clip-path 0.5s ease;  /* Anima suavemente o recorte quando ele muda*/
+}
+
+.menu:hover .sidebar {
+  clip-path: inset(0 0 0 0); /* mostra tudo */
+}

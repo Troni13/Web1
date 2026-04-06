@@ -1,0 +1,27 @@
+.card {
+  opacity: 0;  /* .card começa invisível. */
+  pointer-events: none; /* enquanto invisível, ela não responde a cliques ou interações*/
+  transition: opacity 0.3s ease;
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 300px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.card:target { /* ativa quando o leemento é alvo na URL */
+  opacity: 1; /* .card se torna visível. */
+  pointer-events: auto; /*  responde a cliques normalmente. */
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.botao, .fechar {
+  display: inline-block; /* Os botões se comportam como caixas inline (com largura e altura ajustáveis). */
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+}

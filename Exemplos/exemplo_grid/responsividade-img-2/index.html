@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" >
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Imagem Responsiva</h1>
+
+      <div>
+        <picture>
+          <!-- desktop -->
+          <source media="(min-width: 1024px)" 
+                  srcset="images/ceu-1200x400.jpg" />
+
+          <!-- tablet -->
+          <source media="(min-width: 768px)" 
+                  srcset="images/ponte-800x300.jpg "/>
+
+          <!-- smarthphone -->
+          <img src="images/trafego-400x300.jpg" />
+        </picture>
+      </div>
+</body>
+</html>

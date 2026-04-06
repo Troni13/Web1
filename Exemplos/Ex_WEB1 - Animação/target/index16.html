@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Card com Target</title>
+  <link rel="stylesheet" href="style16.css">
+</head>
+<body>
+   <!-- Quando clica em “Ver mais”, a URL vai pra #card, 
+   e o CSS :target ativa! -->
+   
+   <!-- A opacidade passa de 0 → 1 com animação, e o card aparece. -->
+  <a href="#card" class="botao">Ver mais</a>
+
+  <div id="card" class="card">
+    <h2>Informações</h2>
+    <p>Esse conteúdo aparece com o uso do `:target`!</p>
+	<!-- Ao clicar em "Fechar", o href="#" remove o fragmento #card, e o card some. -->
+    <a href="#" class="fechar">Fechar</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* Declaração de Variáveis CSS */
+:root {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2ecc71;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333333;
+    --espacamento-padrao: 16px;
+    --fonte-padrao: 'Arial', sans-serif;
+}
+
+/* Reset básico para remover margens padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que padding e border não aumentem o tamanho do elemento */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-padrao);
+}

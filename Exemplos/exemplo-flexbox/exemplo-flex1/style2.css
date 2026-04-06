@@ -1,0 +1,80 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.main {
+  flex: 1; /* flex-grow, flex-shrink e flex-basis */
+  display: flex; 
+  flex-direction: column; /* define a direção */ 
+  gap: 20px; /* define o espaçamento entre os itens flexíveis */
+  padding: 40px 20px;
+}
+
+/* Intro section */
+.intro {
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap; /*permite que os flex items quebrem para uma nova linha, quando necessário*/
+  justify-content: center /* alinhamento */ 
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

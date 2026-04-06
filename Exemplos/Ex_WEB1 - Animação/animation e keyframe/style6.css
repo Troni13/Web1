@@ -1,0 +1,24 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.quadrado {
+
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  
+  /* forma abreviada da propriedade animation */
+  animation: mover 2s ease-in-out infinite;
+  
+  /* nome da animation - duração - função de timing - repetição */
+  /* unção de timing, que define a velocidade da animação ao longo do tempo */
+  
+}
+
+@keyframes mover {
+  0% { left: 0; }
+  100% { left: calc(100vw - 100px); }
+}

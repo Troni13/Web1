@@ -1,0 +1,39 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.bolha {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  border-radius: 0%;
+  animation: mudar 3s ease-in-out infinite alternate;
+  /* nome - duração - temporização - repetições - direção */
+  /* alternate: Isso altera a direção da animação a cada repetição.
+     Quando a animação atinge o final (100%), ela vai voltar para o 
+	 início (0%) de maneira suave, e não reiniciar abruptamente.
+	Ou seja, se a animação começa indo de 0% para 100%, na segunda 
+	repetição ela vai de 100% para 0%, e assim por diante, 
+	criando um efeito de ida e volta (como um "ping pong"). */
+}
+
+@keyframes mudar {
+  0% {
+    background: blue;
+    border-radius: 0%;
+    transform: rotate(0deg);
+  }
+  50% {
+    background: purple;
+    border-radius: 50%;
+    transform: rotate(180deg);
+  }
+  100% {
+    background: green;
+    border-radius: 0%;
+    transform: rotate(360deg);
+  }
+}

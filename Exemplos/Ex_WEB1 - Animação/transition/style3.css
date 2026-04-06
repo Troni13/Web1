@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Exemplo de botão com o cursor pointer */
+.pointer-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.pointer-btn:hover {
+    background-color: #45a049;
+}
+
+/* Exemplo de área que pode ser movida (move) */
+.move-btn {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: move;
+}
+
+/* Exemplo de caixa redimensionável */
+.resize-box {
+    width: 150px;
+    height: 150px;
+    background-color: #FF5722;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: se-resize;  /* Cursor para redimensionamento */
+}
+
+/* Exemplo de área de texto (text) */
+.text-area {
+    background-color: #FFC107;
+    padding: 20px;
+    cursor: text;  /* Cursor para seleção de texto */
+}
+
+
+/* 
+
+Tipo de Cursor	Descrição
+default		O ponteiro padrão, geralmente uma seta (cursor usado em elementos normais).
+pointer		O cursor se transforma em uma mão (geralmente usado para links).
+move		O ponteiro se transforma em uma cruz (indica que o elemento pode ser movido).
+wait		O ponteiro se transforma em uma ampulheta (indica que algo está sendo processado).
+help		O ponteiro se transforma em um ponto de interrogação (usado para ajuda).
+text		O ponteiro se transforma em uma linha de texto (geralmente usado em áreas de texto ou links).
+not-allowed	Indica que a ação não é permitida, geralmente acompanhado de um ícone de círculo com uma linha.
+crosshair	O ponteiro se transforma em uma cruz, geralmente usado para seleção de pontos específicos.
+progress	O ponteiro se transforma em um círculo (indica progresso, mas não pode ser interagido).
+e-resize	O ponteiro indica que o elemento pode ser redimensionado para a direita.
+w-resize	O ponteiro indica que o elemento pode ser redimensionado para a esquerda.
+n-resize	O ponteiro indica que o elemento pode ser redimensionado para cima.
+s-resize	O ponteiro indica que o elemento pode ser redimensionado para baixo.
+ne-resize	O ponteiro indica que o elemento pode ser redimensionado na diagonal, no canto superior direito.
+nw-resize	O ponteiro indica que o elemento pode ser redimensionado na diagonal, no canto superior esquerdo.
+se-resize	O ponteiro indica que o elemento pode ser redimensionado na diagonal, no canto inferior direito.
+sw-resize	O ponteiro indica que o elemento pode ser redimensionado na diagonal, no canto inferior esquerdo.
+alias		O ponteiro é alterado para indicar que uma ação criará um alias (uma espécie de atalho).
+copy		O ponteiro é alterado para indicar que o usuário pode copiar (geralmente usado em operações de "arrastar e soltar").
+
+*/

@@ -1,0 +1,28 @@
+/* CONTAINER FLEX (Elemento Pai) */
+.flex-container {
+    display: flex; /* Ativa o flexbox */
+    
+    flex-direction: row; /* row (padrão, linha), column (coluna) */
+    
+    /* Alinhamento no Eixo Principal (Horizontal em 'row') */
+    justify-content: space-between; /* center, flex-start, flex-end, space-around, space-evenly */
+    
+    /* Alinhamento no Eixo Transversal (Vertical em 'row') */
+    align-items: center; /* stretch (padrão), flex-start, flex-end, baseline */
+    
+    /* Comportamento de quebra de linha */
+    flex-wrap: wrap; /* nowrap (padrão), wrap, wrap-reverse */
+    
+    gap: 20px; /* Espaçamento entre os itens (substitui margin) */
+    
+    padding: var(--espacamento-padrao);
+}
+
+/* ITENS FLEX (Elementos Filhos) */
+.flex-item {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 300px; /* Cresce, encolhe e tem tamanho base de 300px */
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 20px;
+}

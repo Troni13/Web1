@@ -1,0 +1,67 @@
+:root {
+/* Tema claro */
+  --card-bg-main: #6487aa;
+  --bg-main: #F0F0F5;
+  --text-primary: black;
+  --text-secondary: white;
+  --shadow: 0 8px 24px rgba(160, 160, 160, 0.5);
+  --font-title: 'Inter', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+/* Tema Escuro */
+  --dark-header-bg-main: #2C3E50;
+  --dark-bg-main: #272727;
+  --dark-text-primary: white;
+  --dark-text-secondary: black;
+  --dark-shadow: 0 8px 24px rgba(255, 255, 255, 0.5);
+  --dark-font-title: 'Inter', sans-serif;
+  --dark-font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: var(--bg-main);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    background-color: var(--card-bg-main);
+    color: var(--text-secondary);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.card a:hover {
+    color: aqua;
+}
+
+
+.card img{
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+}

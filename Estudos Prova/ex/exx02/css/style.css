@@ -1,0 +1,174 @@
+/* --- VARIÁVEIS DE COR (TEMA CLARO) --- */
+:root {
+    --bg-main: #f0f2f5;
+    --bg-card: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --brand-color: #2c3e50; /* Azul escuro do topo e lateral */
+    --brand-text: #ffffff;
+}
+
+/* --- HACK DO TEMA ESCURO --- */
+/* Se o checkbox do tema estiver marcado, substitui as variáveis */
+#theme-toggle:checked ~ .app-wrapper {
+    --bg-main: #18191a;
+    --bg-card: #242526;
+    --text-main: #e4e6eb;
+    --text-muted: #b0b3b8;
+    --brand-color: #111111;
+}
+
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Esconde os checkboxes que servem apenas como controladores */
+.toggle-checkbox {
+    display: none; 
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- CABEÇALHO --- */
+.header {
+    background-color: var(--brand-color);
+    color: var(--brand-text);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn, .theme-btn {
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+}
+
+.top-nav {
+    display: flex;
+    gap: 15px;
+    margin-left: auto; /* Empurra a navegação e o botão de tema para a direita */
+    margin-right: 15px;
+}
+
+.top-nav a {
+    color: var(--brand-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.main-container {
+    display: flex;
+    flex: 1; /* Ocupa o restante da tela */
+    overflow: hidden; /* Evita que a sidebar gere scroll horizontal ao sumir */
+}
+
+/* --- MENU LATERAL (SIDEBAR) --- */
+.sidebar {
+    background-color: var(--brand-color);
+    width: 200px;
+    transition: margin-left 0.3s ease, background-color 0.3s ease;
+}
+
+/* --- HACK DO MENU HAMBÚRGUER --- */
+/* Se o checkbox do menu NÃO estiver marcado, a margem negativa esconde a barra */
+#menu-toggle:not(:checked) ~ .app-wrapper .sidebar {
+    margin-left: -200px; 
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.side-nav a {
+    color: var(--brand-text);
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.side-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- ÁREA DE CONTEÚDO --- */
+.content {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* --- CARDS --- */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 30px 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* --- RODAPÉ --- */
+.footer {
+    background-color: var(--brand-color);
+    color: var(--brand-text);
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,140 @@
+/* =========================================
+   1. VARIÁVEIS E RESET
+   ========================================= */
+:root {
+    --cor-fundo: #f9f9f9;
+    --cor-header: #ffffff;
+    --cor-borda: #cccccc;
+    --cor-texto: #333333;
+    --cor-hover: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* =========================================
+   2. ESTRUTURA MACRO (FLEXBOX COLUNA)
+   ========================================= */
+.flex-layout-app {
+    display: flex;
+    flex-direction: column; /* Coloca o header no topo e o corpo embaixo */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+}
+
+/* =========================================
+   3. CABEÇALHO (FLEXBOX)
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    background-color: var(--cor-header);
+    border-bottom: 1px solid var(--cor-borda);
+    flex-shrink: 0; /* Impede que o header seja esmagado caso falte espaço */
+}
+
+.busca input {
+    padding: 8px 16px;
+    width: 300px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+}
+
+/* =========================================
+   4. CONTAINER DO CORPO (FLEXBOX LINHA)
+   ========================================= */
+.flex-body-container {
+    display: flex;
+    flex-direction: row; /* Coloca Menu e Main lado a lado (padrão do flex) */
+    flex: 1; /* Faz este container ocupar todo o espaço restante abaixo do header */
+    overflow: hidden; /* Essencial: impede que o layout quebre, forçando a rolagem interna */
+}
+
+/* =========================================
+   5. MENU LATERAL
+   ========================================= */
+.sidebar {
+    width: 200px; /* Largura fixa */
+    background-color: var(--cor-header);
+    border-right: 1px solid var(--cor-borda);
+    padding-top: 20px;
+    flex-shrink: 0; /* Impede que o menu encolha em telas menores */
+    overflow-y: auto; /* Permite rolagem no menu caso tenha muitos links */
+}
+
+.sidebar ul { list-style: none; }
+.sidebar li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: background-color 0.2s;
+}
+.sidebar li a:hover { background-color: var(--cor-hover); }
+
+/* =========================================
+   6. CONTEÚDO PRINCIPAL E CARDS (FLEX WRAP)
+   ========================================= */
+.main-content {
+    flex: 1; /* Ocupa todo o espaço restante ao lado do menu */
+    padding: 20px;
+    overflow-y: auto; /* Cria barra de rolagem apenas nesta área */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* O SEGREDO AQUI: Quando os cards não couberem na linha, eles descem */
+    gap: 20px; /* Espaço entre os cartões */
+}
+
+.card {
+    /* flex-grow, flex-shrink, flex-basis */
+    /* Cresce para ocupar o espaço, pode encolher, e começa com 250px no mínimo */
+    flex: 1 1 250px; 
+    
+    background-color: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Flex interno para a imagem e o texto */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.thumbnail {
+    background-color: #e0e0e0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.info h3 { font-size: 16px; }
+.info p { font-size: 14px; color: #777; }
