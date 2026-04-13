@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: url(../imagens/cinema.png);
+    background-size: 400px;
+    background-position-x: -100px;
+}
+
+header {
+    background-color: #26B3F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1 {
+    color: white;
+}
+
+span {
+    font-size: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    width: 600px;
+}
+
+.container p{
+    margin-top: 20px;
+}
+
+footer {
+    display: flex;
+    background-color: #dfbf62;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 96%;
+    bottom: 0;
+    position: fixed;
+}

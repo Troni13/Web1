@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: url(../imagens/cinema.png);
+    background-size: 400px;
+    background-position-x: -100px;
+}
+
+.filme {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.desc {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px 20px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    background-color: #26B3F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+header h1 {
+    color: white;
+    
+}
+
+span {
+    font-size: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+}
+
+.container1{
+    display: grid;
+    padding: 20px;
+    gap: 20px;
+    grid-template-columns: 4fr 8fr;
+    grid-template-rows: 300px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.card1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.card1:hover {
+    transform: scale(1.2);
+}
+
+.container2{
+    display: grid;
+    padding: 20px;
+    gap: 60px;
+    grid-template-columns: 8fr 4fr;
+    grid-template-rows: 300px;
+    margin-bottom: 30px;
+}
+
+.card2 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.card2:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    display: flex;
+    background-color: #dfbf62;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 96%;
+    bottom: 0;
+    position: fixed;
+}
