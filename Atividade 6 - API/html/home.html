@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Séries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Catálogo de Séries</a>
+            <form class="d-flex" role="search" id="form-pesquisa">
+                <input class="form-control me-2" type="search" placeholder="Digite aqui..." aria-label="Search"
+                    id="nome" />
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div id="resultado" class="row">
+            <div class="col-12 text-center mt-5 text-muted">
+                <h4>Bem-vindo ao Catálogo de Séries!</h4>
+                <p>Use a barra de pesquisa acima para encontrar informações sobre suas séries favoritas.</p>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/busca.js"></script>
+</body>
+</html>
